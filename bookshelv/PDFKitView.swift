@@ -5,11 +5,13 @@
 //  Created by Abdalla Elnajjar on 2021-02-19.
 //
 
-import PDFKit
 import SwiftUI
+import PDFKit
+import UIKit
 
 struct PDFKitView: View {
     var url: URL
+    
     //var pdfName:String
     var body: some View {
         PDFKitRepresentedView(url)
@@ -18,6 +20,7 @@ struct PDFKitView: View {
 
 struct PDFKitRepresentedView: UIViewRepresentable {
     let url: URL
+  
     init(_ url: URL) {
         self.url = url
     }
@@ -33,6 +36,5 @@ struct PDFKitRepresentedView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PDFKitRepresentedView>) {
-        // Update the view.
     }
 }

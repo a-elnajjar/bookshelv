@@ -13,6 +13,8 @@
 		8E68DC1525E02E5D0069FFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E68DC1425E02E5D0069FFBC /* Assets.xcassets */; };
 		8E68DC1825E02E5D0069FFBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E68DC1725E02E5D0069FFBC /* Preview Assets.xcassets */; };
 		8E68DC2B25E062BC0069FFBC /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E68DC2A25E062BC0069FFBC /* PDFKitView.swift */; };
+		8ED2902D25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2902B25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf */; };
+		8ED2902E25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2902C25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8E68DC1725E02E5D0069FFBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E68DC1925E02E5D0069FFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E68DC2A25E062BC0069FFBC /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
+		8ED2902B25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ASPNETInterviewQuestions.pdf; sourceTree = "<group>"; };
+		8ED2902C25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DotNETCoreInterviewQuestions.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				8E209FEE25E0B88800E00CFC /* swift-style-second-edition_P1.0.pdf */,
+				8ED2902B25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf */,
+				8ED2902C25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf */,
 				8E68DC1025E02E5C0069FFBC /* bookshelvApp.swift */,
 				8E68DC1225E02E5C0069FFBC /* ContentView.swift */,
 				8E68DC1425E02E5D0069FFBC /* Assets.xcassets */,
@@ -135,6 +141,8 @@
 				8E209FEF25E0B88800E00CFC /* swift-style-second-edition_P1.0.pdf in Resources */,
 				8E68DC1825E02E5D0069FFBC /* Preview Assets.xcassets in Resources */,
 				8E68DC1525E02E5D0069FFBC /* Assets.xcassets in Resources */,
+				8ED2902E25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf in Resources */,
+				8ED2902D25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

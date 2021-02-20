@@ -11,7 +11,9 @@ import PDFKit
 struct ContentView: View {
     
     @State private var viewLocalPDF = false
-    let fileUrl = Bundle.main.url(forResource: "swift-style-second-edition_P1.0", withExtension:"pdf")!
+    let fileUrl1 = Bundle.main.url(forResource: "swift-style-second-edition_P1.0", withExtension:"pdf")!
+    let fileUrl2 = Bundle.main.url(forResource: "ASPNETInterviewQuestions", withExtension:"pdf")!
+    let fileUrl3 = Bundle.main.url(forResource: "DotNETCoreInterviewQuestions", withExtension:"pdf")!
     var body: some View {
 
         
@@ -19,8 +21,20 @@ struct ContentView: View {
         NavigationView {
                 ZStack {
                     VStack {
-                        NavigationLink(destination: PDFKitView(url: self.fileUrl), isActive: $viewLocalPDF) {
-                            Button("view book"){
+                        NavigationLink(destination: PDFKitView(url: self.fileUrl1), isActive: $viewLocalPDF) {
+                            Button("Swift Style"){
+                                self.viewLocalPDF = true
+                            }
+                            .padding(.bottom, 20)
+                        }
+                        NavigationLink(destination: PDFKitView(url: self.fileUrl2), isActive: $viewLocalPDF) {
+                            Button("ASP .NET Interview Questions"){
+                                self.viewLocalPDF = true
+                            }
+                            .padding(.bottom, 20)
+                        }
+                        NavigationLink(destination: PDFKitView(url: self.fileUrl3), isActive: $viewLocalPDF) {
+                            Button(".NET Core Interview Questions"){
                                 self.viewLocalPDF = true
                             }
                             .padding(.bottom, 20)
