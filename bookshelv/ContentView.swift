@@ -11,6 +11,7 @@ import PDFKit
 struct ContentView: View {
     
     @State private var viewLocalPDF = false
+    
     let fileUrl1 = Bundle.main.url(forResource: "swift-style-second-edition_P1.0", withExtension:"pdf")!
     let fileUrl2 = Bundle.main.url(forResource: "ASPNETInterviewQuestions", withExtension:"pdf")!
     let fileUrl3 = Bundle.main.url(forResource: "DotNETCoreInterviewQuestions", withExtension:"pdf")!
@@ -43,6 +44,25 @@ struct ContentView: View {
                 }
                 .navigationBarTitle("Bookshelv ", displayMode: .inline)
             }
+        
+        
+        
+    }
+    
+    
+    func listDir(dir: String) {
+        // Create a FileManager instance
+        
+        let fileManager = FileManager.default
+        let documentsURL = fileManager.urls(for: .documentDirectory,
+            in:.userDomainMask)[0]
+        do {
+            let fileUrls = try fileManager.contentsOfDirectory(at:documentsURL, includingPropertiesForKeys: nil)
+            // process files
+            print(fileUrls)
+        } catch {
+            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+        }
         
     }
 }
