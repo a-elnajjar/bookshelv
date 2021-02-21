@@ -11,59 +11,46 @@ import PDFKit
 struct ContentView: View {
     
     @State private var viewLocalPDF = false
+    @State private var fileUrls:[URL]? = []
     
-    let fileUrl1 = Bundle.main.url(forResource: "swift-style-second-edition_P1.0", withExtension:"pdf")!
-    let fileUrl2 = Bundle.main.url(forResource: "ASPNETInterviewQuestions", withExtension:"pdf")!
-    let fileUrl3 = Bundle.main.url(forResource: "DotNETCoreInterviewQuestions", withExtension:"pdf")!
-    var body: some View {
 
+    func listDir(dir: String) -> [URL]? {
+        let fileManager = FileManager.default
+        let documentsURL = Bundle.main.resourceURL!.appendingPathComponent(dir)
+        var fileUrls:[URL]?
         
-        
-        NavigationView {
-                ZStack {
-                    VStack {
-                        NavigationLink(destination: PDFKitView(url: self.fileUrl1), isActive: $viewLocalPDF) {
-                            Button("Swift Style"){
-                                self.viewLocalPDF = true
-                            }
-                            .padding(.bottom, 20)
-                        }
-                        NavigationLink(destination: PDFKitView(url: self.fileUrl2), isActive: $viewLocalPDF) {
-                            Button("ASP .NET Interview Questions"){
-                                self.viewLocalPDF = true
-                            }
-                            .padding(.bottom, 20)
-                        }
-                        NavigationLink(destination: PDFKitView(url: self.fileUrl3), isActive: $viewLocalPDF) {
-                            Button(".NET Core Interview Questions"){
-                                self.viewLocalPDF = true
-                            }
-                            .padding(.bottom, 20)
-                        }
-                    }
-                }
-                .navigationBarTitle("Bookshelv ", displayMode: .inline)
-            }
-        
-        
+        do {
+            fileUrls = try fileManager.contentsOfDirectory(at:documentsURL, includingPropertiesForKeys: nil)
+            return  fileUrls!
+            
+        } catch {
+            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+            return nil
+        }
         
     }
     
-    
-    func listDir(dir: String) {
-        // Create a FileManager instance
+    var body: some View {
         
-        let fileManager = FileManager.default
-        let documentsURL = fileManager.urls(for: .documentDirectory,
-            in:.userDomainMask)[0]
-        do {
-            let fileUrls = try fileManager.contentsOfDirectory(at:documentsURL, includingPropertiesForKeys: nil)
-            // process files
-            print(fileUrls)
-        } catch {
-            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+        NavigationView {
+            ZStack {
+                VStack {
+                    List{
+                        ForEach(fileUrls!, id: \.self) { fileUrl in
+                            NavigationLink(destination: PDFKitView(url: fileUrl), isActive: $viewLocalPDF) {
+                                Button(fileUrl.lastPathComponent){
+                                    self.viewLocalPDF = true
+                                }
+                                .padding(.bottom, 20)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationBarTitle("Bookshelv ", displayMode: .inline).onAppear {
+                fileUrls = listDir(dir: "pdfs")
+            }
         }
-        
     }
 }
 

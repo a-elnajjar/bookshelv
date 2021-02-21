@@ -16,6 +16,7 @@
 		8ED2902D25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2902B25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf */; };
 		8ED2902E25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2902C25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf */; };
 		8ED2903125E17E8100D0AC3D /* PdfInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2903025E17E8100D0AC3D /* PdfInfo.swift */; };
+		8ED2903925E1B15C00D0AC3D /* pdfs in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2903825E1B15C00D0AC3D /* pdfs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8ED2902B25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ASPNETInterviewQuestions.pdf; sourceTree = "<group>"; };
 		8ED2902C25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DotNETCoreInterviewQuestions.pdf; sourceTree = "<group>"; };
 		8ED2903025E17E8100D0AC3D /* PdfInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfInfo.swift; sourceTree = "<group>"; };
+		8ED2903825E1B15C00D0AC3D /* pdfs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pdfs; path = bookshelv/pdfs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		8E68DC0425E02E5C0069FFBC = {
 			isa = PBXGroup;
 			children = (
+				8ED2903825E1B15C00D0AC3D /* pdfs */,
 				8E68DC0F25E02E5C0069FFBC /* bookshelv */,
 				8E68DC0E25E02E5C0069FFBC /* Products */,
 			);
@@ -62,7 +65,7 @@
 		8E68DC0F25E02E5C0069FFBC /* bookshelv */ = {
 			isa = PBXGroup;
 			children = (
-				8ED2903425E19DB200D0AC3D /* bdfs */,
+				8ED2903425E19DB200D0AC3D /* pdfs */,
 				8E68DC1025E02E5C0069FFBC /* bookshelvApp.swift */,
 				8E68DC1225E02E5C0069FFBC /* ContentView.swift */,
 				8E68DC1425E02E5D0069FFBC /* Assets.xcassets */,
@@ -82,14 +85,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8ED2903425E19DB200D0AC3D /* bdfs */ = {
+		8ED2903425E19DB200D0AC3D /* pdfs */ = {
 			isa = PBXGroup;
 			children = (
 				8E209FEE25E0B88800E00CFC /* swift-style-second-edition_P1.0.pdf */,
 				8ED2902B25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf */,
 				8ED2902C25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf */,
 			);
-			path = bdfs;
+			path = pdfs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +157,7 @@
 				8E68DC1525E02E5D0069FFBC /* Assets.xcassets in Resources */,
 				8ED2902E25E16D1000D0AC3D /* DotNETCoreInterviewQuestions.pdf in Resources */,
 				8ED2902D25E16D1000D0AC3D /* ASPNETInterviewQuestions.pdf in Resources */,
+				8ED2903925E1B15C00D0AC3D /* pdfs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
